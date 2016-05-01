@@ -4,15 +4,36 @@
 	<meta charset="UTF-8">
 	<title>Generate sound with JS</title>
 	<script type="text/javascript" src="main.js"></script>
+	<style type="text/css">
+		body{
+			text-align: center;
+			font-size: 1.4rem;
+		}
+		p{
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			max-width: 45rem;/*Corresponds to ~ 80 chars for me*/
+		}
+	</style>
 </head>
 <body>
 <h1>My synth</h1>
 <p>Press keys on the home row to play!</p>
+<p>Currently only uses the pentatonic scale</p>
 <div class="wave_type_buttons">
-	<input type="radio" name="all_wave_type" onclick="setAllSine()">Sine</input>
-	<input type="radio" name="all_wave_type" onclick="setAllSquare()">Square</input>
-	<input type="radio" name="all_wave_type" onclick="setAllSawtooth()">Sawtooth</input>
-	<input type="radio" name="all_wave_type" onclick="setAllTriangle()">Triangle</input>
+	<label for="sine_toggle">
+		<input type="radio" name="all_wave_type" id="sine_toggle" onclick="setAllSine()" checked="checked">Sine</input>
+	</label>
+	<label for="square_toggle">
+		<input type="radio" name="all_wave_type" id="square_toggle" onclick="setAllSquare()">Square</input>
+	</label>
+	<label for="sawtooth_toggle">
+		<input type="radio" name="all_wave_type" id="sawtooth_toggle" onclick="setAllSawtooth()">Sawtooth</input>
+	</label>
+	<label for="triangle_toggle">
+		<input type="radio" name="all_wave_type" id="triangle_toggle" onclick="setAllTriangle()">Triangle</input>
+	</label>
 </div>
 <!-- <h1>Visualization</h1>
 <div class="sound_wave_container">
