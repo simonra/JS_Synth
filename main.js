@@ -162,6 +162,7 @@ document.onkeydown = function(evt){
 	evt = evt || window.event;
 	var charCode = evt.keyCode || evt.which;
 	var charString = String.fromCharCode(charCode);
+	// console.log(charString); // Use this for debugging the keys to the left of the 'l'-cahracter
 	switch(charString){
 		case 'A':
 			// osc.connect(context.destination);
@@ -191,37 +192,37 @@ document.onkeydown = function(evt){
 		case 'H':
 			// osc5.connect(context.destination);
 			gain6.connect(context.destination);
-			console.log("g down");
+			console.log("h down");
 			break;
 		case 'J':
 			// osc5.connect(context.destination);
 			gain7.connect(context.destination);
-			console.log("g down");
+			console.log("j down");
 			break;
 		case 'K':
 			// osc5.connect(context.destination);
 			gain8.connect(context.destination);
-			console.log("g down");
+			console.log("k down");
 			break;
 		case 'L':
 			// osc5.connect(context.destination);
 			gain9.connect(context.destination);
-			console.log("g down");
+			console.log("l down");
 			break;
-		case ";":
+		case 'º':
 			// osc5.connect(context.destination);
 			gain10.connect(context.destination);
-			console.log("g down");
+			console.log("; down");
 			break;
-		case "\'":
+		case 'Þ':
 			// osc5.connect(context.destination);
 			gain11.connect(context.destination);
-			console.log("g down");
+			console.log("' down");
 			break;
-		case "\\":
+		case 'Ü':
 			// osc5.connect(context.destination);
 			gain12.connect(context.destination);
-			console.log("g down");
+			console.log("\\ down");
 			break;
 	}
 }
@@ -259,37 +260,37 @@ document.onkeyup = function(evt){
 		case 'H':
 			// osc5.disconnect(context.destination);
 			gain6.disconnect(context.destination);
-			console.log("g down");
+			console.log("h down");
 			break;
 		case 'J':
 			// osc5.disconnect(context.destination);
 			gain7.disconnect(context.destination);
-			console.log("g down");
+			console.log("j down");
 			break;
 		case 'K':
 			// osc5.disconnect(context.destination);
 			gain8.disconnect(context.destination);
-			console.log("g down");
+			console.log("k down");
 			break;
 		case 'L':
 			// osc5.disconnect(context.destination);
 			gain9.disconnect(context.destination);
-			console.log("g down");
+			console.log("l down");
 			break;
-		case ';':
+		case 'º':
 			// osc5.disconnect(context.destination);
 			gain10.disconnect(context.destination);
-			console.log("g down");
+			console.log("; down");
 			break;
-		case "'":
+		case 'Þ':
 			// osc5.disconnect(context.destination);
 			gain11.disconnect(context.destination);
-			console.log("g down");
+			console.log("' down");
 			break;
-		case "\\":
+		case 'Ü':
 			// osc5.disconnect(context.destination);
 			gain12.disconnect(context.destination);
-			console.log("g down");
+			console.log("\\ down");
 			break;
 	}
 }
