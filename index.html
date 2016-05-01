@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Generate sound with JS</title>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+<h1>My synth</h1>
+<p>Press keys on the home row to play! (Currently ASDFG pentatone)</p>
+<div class="wave_type_buttons">
+	<input type="radio" name="all_wave_type" onclick="setAllSine()">Sine</input>
+	<input type="radio" name="all_wave_type" onclick="setAllSquare()">Square</input>
+	<input type="radio" name="all_wave_type" onclick="setAllSawtooth()">Sawtooth</input>
+	<input type="radio" name="all_wave_type" onclick="setAllTriangle()">Triangle</input>
+</div>
+<!-- <h1>Visualization</h1>
+<div class="sound_wave_container">
+	<canvas class="sound_wave" width="80%" height="5rem"></canvas>
+	<button onclick="startPlay()">Start</button>
+	<button onclick="stopPlaying()">Stop</button>
+</div> -->
+</body>
+</html>
