@@ -13,18 +13,18 @@ for (i = 0; i < numberOfKeys; i++) {
 }
 
 // Major pentatonic scale, C, D, E, G, A
-oscillators[0].frequency.value  = noteFrequencies.C6;
-oscillators[1].frequency.value  = noteFrequencies.D6;
-oscillators[2].frequency.value  = noteFrequencies.E6;
-oscillators[3].frequency.value  = noteFrequencies.G6;
-oscillators[4].frequency.value  = noteFrequencies.A6;
-oscillators[5].frequency.value  = noteFrequencies.C7;
-oscillators[6].frequency.value  = noteFrequencies.D7;
-oscillators[7].frequency.value  = noteFrequencies.E7;
-oscillators[8].frequency.value  = noteFrequencies.G7;
-oscillators[9].frequency.value  = noteFrequencies.A7;
-oscillators[10].frequency.value = noteFrequencies.C8;
-oscillators[11].frequency.value = noteFrequencies.D8;
+oscillators[0].frequency.value  = noteFrequencies.C4;
+oscillators[1].frequency.value  = noteFrequencies.D4;
+oscillators[2].frequency.value  = noteFrequencies.E4;
+oscillators[3].frequency.value  = noteFrequencies.G4;
+oscillators[4].frequency.value  = noteFrequencies.A4;
+oscillators[5].frequency.value  = noteFrequencies.C5;
+oscillators[6].frequency.value  = noteFrequencies.D5;
+oscillators[7].frequency.value  = noteFrequencies.E5;
+oscillators[8].frequency.value  = noteFrequencies.G5;
+oscillators[9].frequency.value  = noteFrequencies.A5;
+oscillators[10].frequency.value = noteFrequencies.C6;
+oscillators[11].frequency.value = noteFrequencies.D6;
 
 // Set all oscilators to same type:
 function setAllSine() {
