@@ -13,19 +13,18 @@ for (i = 0; i < numberOfKeys; i++) {
 }
 
 // Major pentatonic scale, C, D, E, G, A
-// Start at C4:
-oscillators[0].frequency.value = 261.626;
-oscillators[1].frequency.value = 293.665;
-oscillators[2].frequency.value = 329.628;
-oscillators[3].frequency.value = 391.995;
-oscillators[4].frequency.value = 440.000;
-oscillators[5].frequency.value = 523.251;
-oscillators[6].frequency.value = 587.330;
-oscillators[7].frequency.value = 659.255;
-oscillators[8].frequency.value = 783.991;
-oscillators[9].frequency.value = 880.000;
-oscillators[10].frequency.value = 1046.50;
-oscillators[11].frequency.value = 1174.66;
+oscillators[0].frequency.value  = noteFrequencies.C6;
+oscillators[1].frequency.value  = noteFrequencies.D6;
+oscillators[2].frequency.value  = noteFrequencies.E6;
+oscillators[3].frequency.value  = noteFrequencies.G6;
+oscillators[4].frequency.value  = noteFrequencies.A6;
+oscillators[5].frequency.value  = noteFrequencies.C7;
+oscillators[6].frequency.value  = noteFrequencies.D7;
+oscillators[7].frequency.value  = noteFrequencies.E7;
+oscillators[8].frequency.value  = noteFrequencies.G7;
+oscillators[9].frequency.value  = noteFrequencies.A7;
+oscillators[10].frequency.value = noteFrequencies.C8;
+oscillators[11].frequency.value = noteFrequencies.D8;
 
 // Set all oscilators to same type:
 function setAllSine() {
