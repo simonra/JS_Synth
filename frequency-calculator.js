@@ -12,3 +12,12 @@ function getFundamentalFrequencyForSemitone(semitone){
 function getFundamentalFrequencyForSemitoneGivenTuning(semitone, tuningFrequency){
 	return tuningFrequency*Math.pow(2,(semitone-9)/12);
 }
+
+function printMidiFrequencies(){
+	var listOfFrequencies =new Array;
+	for (var i = 0; i < 150; i++) {
+		console.log(getFrequencyForMidi(i));
+		listOfFrequencies[i] = getFrequencyForMidi(i);
+	}
+	return listOfFrequencies;
+}

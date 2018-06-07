@@ -1,6 +1,6 @@
 var context = new AudioContext();
 
-var numberOfKeys = 12;
+var numberOfKeys = 15;
 var gains = new Array(numberOfKeys);
 var oscillators = new Array(numberOfKeys);
 
@@ -10,21 +10,37 @@ for (i = 0; i < numberOfKeys; i++) {
 	oscillators[i] = context.createOscillator();
 	oscillators[i].connect(gains[i]);
 	oscillators[i].start(0);
+	oscillators[i].frequency.value  = midiFrequencies[i + 60];
 }
 
 // Major pentatonic scale, C, D, E, G, A
-oscillators[0].frequency.value  = noteFrequencies.C4;
-oscillators[1].frequency.value  = noteFrequencies.D4;
-oscillators[2].frequency.value  = noteFrequencies.E4;
-oscillators[3].frequency.value  = noteFrequencies.G4;
-oscillators[4].frequency.value  = noteFrequencies.A4;
-oscillators[5].frequency.value  = noteFrequencies.C5;
-oscillators[6].frequency.value  = noteFrequencies.D5;
-oscillators[7].frequency.value  = noteFrequencies.E5;
-oscillators[8].frequency.value  = noteFrequencies.G5;
-oscillators[9].frequency.value  = noteFrequencies.A5;
-oscillators[10].frequency.value = noteFrequencies.C6;
-oscillators[11].frequency.value = noteFrequencies.D6;
+// oscillators[0].frequency.value  = noteFrequencies.C4;
+// oscillators[1].frequency.value  = noteFrequencies.D4;
+// oscillators[2].frequency.value  = noteFrequencies.E4;
+// oscillators[3].frequency.value  = noteFrequencies.G4;
+// oscillators[4].frequency.value  = noteFrequencies.A4;
+// oscillators[5].frequency.value  = noteFrequencies.C5;
+// oscillators[6].frequency.value  = noteFrequencies.D5;
+// oscillators[7].frequency.value  = noteFrequencies.E5;
+// oscillators[8].frequency.value  = noteFrequencies.G5;
+// oscillators[9].frequency.value  = noteFrequencies.A5;
+// oscillators[10].frequency.value = noteFrequencies.C6;
+// oscillators[11].frequency.value = noteFrequencies.D6;
+
+function setOscillatorToOctave(octave){
+	// add 1 to octave because they are 0-indexed:
+	var octaveOffset = (Number(octave) + 1)*12;
+	for(i = 0; i < numberOfKeys; i++){
+		var midiNumber = i + octaveOffset;
+		if(midiNumber >= midiFrequencies.length){
+			midiNumber = midiFrequencies.length - 1;
+		}
+		else if (midiNumber < 0){
+			midiNumber = 0;
+		}
+		oscillators[i].frequency.value  = midiFrequencies[midiNumber];
+	}
+}
 
 // Set all oscilators to same type:
 function setAllSine() {
@@ -49,18 +65,29 @@ function setAllTriangle() {
 }
 
 var keyboardToGainMapping = {
+	// Q:
 	A:gains[0],
-	S:gains[1],
-	D:gains[2],
-	F:gains[3],
-	G:gains[4],
-	H:gains[5],
-	J:gains[6],
-	K:gains[7],
-	L:gains[8],
-	º:gains[9],
-	Þ:gains[10],
-	Ü:gains[11]
+	W:gains[1],
+	S:gains[2],
+	E:gains[3],
+	D:gains[4],
+	// R:gains[0],
+	F:gains[5],
+	T:gains[6],
+	G:gains[7],
+	Y:gains[8],
+	H:gains[9],
+	U:gains[10],
+	J:gains[11],
+	// I:gains[0],
+	K:gains[12],
+	O:gains[13],
+	L:gains[14]
+	// P:gains[15],
+	// º:gains[16],//;
+	// {:gains[0],
+	// Þ:gains[17],
+	// Ü:gains[18]
 };
 
 // The console logging is to debug n key rollover issues

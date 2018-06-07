@@ -6,6 +6,7 @@
 	<script type="text/javascript" src="midi-frequencies.js"></script>
 	<script type="text/javascript" src="midi-note-to-frequency-mapper.js"></script>
 	<script type="text/javascript" src="frequency-calculator.js"></script>
+	<script type="text/javascript" src="octave-slider.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 	<style type="text/css">
 		body{
@@ -18,12 +19,15 @@
 			display: block;
 			max-width: 45rem;/*Corresponds to ~ 80 chars for me*/
 		}
+		#octave-selector-input{
+			width: 30rem;
+		}
 	</style>
 </head>
 <body>
 <h1>My synth</h1>
 <p>Press keys on the home row to play!</p>
-<p>Currently only uses the pentatonic scale</p>
+<!-- <p>Currently only uses the pentatonic scale</p> -->
 <div class="wave_type_buttons">
 	<label for="sine_toggle">
 		<input type="radio" name="all_wave_type" id="sine_toggle" onclick="setAllSine()" checked="checked">Sine</input>
@@ -37,6 +41,12 @@
 	<label for="triangle_toggle">
 		<input type="radio" name="all_wave_type" id="triangle_toggle" onclick="setAllTriangle()">Triangle</input>
 	</label>
+</div>
+<br>
+<div class="octave-selector">
+	<p>Select which octave you want (-1 &ndash; 9):</p>
+	<input type="range" id="octave-selector-input" min="-1" max="9" step="1" value="4">
+	<p>Octave: <span id="octave-selected"></span></p>
 </div>
 <!-- <h1>Visualization</h1>
 <div class="sound_wave_container">
