@@ -8,6 +8,7 @@ document.addEventListener(
 		var octaveDisplayField = document.getElementById("octave-selected");
 
 		octaveDisplayField.innerHTML = octaveSlider.value;
+		setOscillatorToOctave(octaveSlider.value);
 		octaveSlider.oninput = function() {
 			octaveDisplayField.innerHTML = octaveSlider.value;
 			setOscillatorToOctave(octaveSlider.value);
