@@ -13,5 +13,6 @@ document.addEventListener(
 			octaveDisplayField.innerHTML = octaveSlider.value;
 			setOscillatorToOctave(octaveSlider.value);
 		}
-	}
+	},
+	{once: true}
 );
