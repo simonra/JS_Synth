@@ -114,7 +114,7 @@ document.onkeydown = function(evt){
 	evt = evt || window.event;
 	var charCode = evt.keyCode || evt.which;
 	var charString = String.fromCharCode(charCode);
-	console.log(charString); // Use this for debugging the keys to the left of the 'l'-cahracter
+	// console.log(charString); // Use this for debugging the keys to the left of the 'l'-cahracter
 
 	if(keyboardToGainMapping[charString] == undefined) {
 		return;
